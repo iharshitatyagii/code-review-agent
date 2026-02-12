@@ -79,7 +79,7 @@ function App() {
           <Code2 className="text-blue-500" size={40} /> 
           Code Review Agent
         </h1>
-        <p className="text-gray-400 mt-2 text-lg font-medium">Full-Stack AI Agent by Virat Sirohi</p>
+        <p className="text-gray-400 mt-2 text-lg font-medium">Full-Stack AI Agent by Harshita Tyagi</p>
       </header>
 
       <main className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
