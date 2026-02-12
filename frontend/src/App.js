@@ -26,7 +26,7 @@ function App() {
 
   const fetchHistory = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/history');
+      const res = await axios.get('https://code-review-agent-lkhi.onrender.com/api/history');
       setHistory(res.data);
     } catch (err) {
       console.error("Failed to load history:", err);
@@ -45,7 +45,7 @@ function App() {
         formData.append('rules', rulesFile);
       }
 
-      const response = await axios.post('http://localhost:5000/api/review/analyze', formData);
+      const response = await axios.post('https://code-review-agent-lkhi.onrender.com/api/review/analyze', formData);
       const analysisData = response.data;
       setResults(analysisData);
 
@@ -55,7 +55,7 @@ function App() {
         ? code.split('github.com/')[1]?.split('/pull')[0] 
         : "Manual Snippet Analysis";
 
-      await axios.post('http://localhost:5000/api/history/save', {
+      await axios.post('https://code-review-agent-lkhi.onrender.com/api/history/save', {
         repoName: displayName,
         prLink: isGitHub ? code : "#",
         summary: analysisData.summary,
