@@ -1,0 +1,7 @@
+{
+  "strict_rules": [
+    "You MUST NEVER use the word 'var'. If you see 'var', mark it as CRITICAL.",
+    "Functions must be arrow functions (const x = () => {}) only.",
+    "If the code rating is below 8, end the summary with 'Better luck next time!'"
+  ]
+}
