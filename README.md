@@ -1,35 +1,31 @@
 # 🚀 AI Code Review Agent
-An advanced, context-aware Full-Stack AI Agent designed to perform instant code audits. Whether it's a manual snippet or a GitHub Pull Request, this agent identifies bugs, security vulnerabilities, and performance bottlenecks using Google Gemini 2.0/3.0.
 
-# 🌟 Key Features
-GitHub Integration: Paste a public PR link, and the agent automatically fetches the Git Diff for review.
+An advanced, context-aware **Full-Stack AI Agent** designed to perform instant code audits. Whether it's a manual snippet or a **GitHub Pull Request**, this agent identifies bugs, security vulnerabilities, and performance bottlenecks using **Google Gemini 2.0/3.0**.
 
-Custom Knowledge Base: Upload a rules.json file to enforce specific team coding standards (e.g., "No 'var'", "Arrow functions only").
+## 🌟 Key Features
 
-Persona-Driven Audits: Use the "Custom Focus" field to guide the AI, from "Strict Security Audit" to "Gordon Ramsay Roast Mode".
+* **GitHub Integration**: Paste a public PR link, and the agent automatically fetches the Git Diff for review.
+* **Custom Knowledge Base**: Upload a `rules.json` file to enforce specific team coding standards (e.g., "No 'var'", "Arrow functions only").
+* **Persona-Driven Audits**: Use the "Custom Focus" field to guide the AI, from "Strict Security Audit" to "Gordon Ramsay Roast Mode".
+* **Review History Dashboard**: An in-memory dashboard to track recent audits and maintain a log of code health over time.
 
-Dynamic Health Score: Get an instant 1/10 to 10/10 rating based on code quality and best practices.
+## 🛠️ Tech Stack
 
-Review History Dashboard: An in-memory dashboard to track recent audits and maintain a log of code health over time.
+* **Frontend**: React.js, Tailwind CSS, Lucide React (Icons)
+* **Backend**: Node.js, Express.js
+* **AI Engine**: Google Gemini API (`gemini-flash-latest`)
+* **Tools**: Multer (File Handling), Axios, Octokit (GitHub API)
 
-# 🛠️ Tech Stack
-Frontend: React.js, Tailwind CSS, Lucide React (Icons).
+## 📂 Project Structure
 
-Backend: Node.js, Express.js.
-
-AI Engine: Google Gemini API (gemini-flash-latest).
-
-Tools: Multer (File Handling), Axios, Octokit (GitHub API).
-
-# 📂 Project Structure
-Plaintext
+```text
 code-review-agent/
 ├── backend/
 │   ├── src/
 │   │   ├── routes/          # API endpoints (Review, History)
 │   │   ├── services/        # AI & GitHub logic
 │   │   └── index.js         # Entry point
-│   └── .env                 # API Keys
+│   └── .env                 # API Keys (Ignored by Git)
 └── frontend/
     ├── src/
     │   ├── App.js           # Main Dashboard UI
